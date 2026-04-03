@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\posthog\consumer.py
+# hypothesis_version: 6.151.9
+
+[0.5, 100, 400, 429, 500, 900, 1024, 'N/A', 'consumer exited.', 'error uploading: %s', 'posthog']

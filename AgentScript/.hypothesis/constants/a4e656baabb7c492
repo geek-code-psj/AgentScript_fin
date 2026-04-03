@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\google\genai\_interactions\types\image_mime_type.py
+# hypothesis_version: 6.151.9
+
+['ImageMimeType', 'image/heic', 'image/heif', 'image/jpeg', 'image/png', 'image/webp']

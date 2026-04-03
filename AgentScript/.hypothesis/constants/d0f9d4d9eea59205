@@ -1,0 +1,4 @@
+# file: C:\Users\email\OneDrive\Documents\Playground\AgentScript\src\agentscript\compiler\ir.py
+# hypothesis_version: 6.151.9
+
+['!=', ', ', '<', '<=', '<memory>', '==', '>', '>=', 'BINARY_OP', 'CALL_TOOL', 'CALL_WORKFLOW', 'COMPARE_OP', 'JUMP', 'JUMP_IF_FALSE', 'LABEL', 'LOAD_ATTR', 'LOAD_CONST', 'LOAD_NAME', 'POP', 'RETURN', 'STEP', 'STORE_NAME', 'UNARY_OP', 'if_end', 'if_false']

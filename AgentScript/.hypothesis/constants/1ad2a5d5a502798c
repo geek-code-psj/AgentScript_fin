@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\sentry_sdk\sessions.py
+# hypothesis_version: 6.151.9
+
+[100, 'Any', 'Dict[Any, Any]', 'List[Any]', 'Optional[Thread]', 'Optional[int]', 'Session', 'abnormal', 'aggregates', 'application', 'attrs', 'crashed', 'errored', 'exited', 'ignore', 'request', 'sentry_sdk.Scope', 'started']

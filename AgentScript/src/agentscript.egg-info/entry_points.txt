@@ -1,0 +1,2 @@
+[console_scripts]
+agentscript = agentscript.cli.main:main

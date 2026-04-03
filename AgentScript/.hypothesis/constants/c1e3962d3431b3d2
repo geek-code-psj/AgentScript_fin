@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\portalocker\utils.py
+# hypothesis_version: 6.151.9
+
+[0.0, 0.001, 0.25, '.lock', 'Already locked', 'Lock', 'a', 'bounded_semaphore', 'locked %r', 'open_atomic', 'trying lock for %r', 'w', 'wb']

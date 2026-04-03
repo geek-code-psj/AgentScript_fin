@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\__init__.py
+# hypothesis_version: 6.151.9
+
+['(\\.0+)*$', '.', '1', 'ERROR', 'GRPC_TRACE', 'GRPC_VERBOSITY', 'assert_test', 'compare', 'deepeval', 'evaluate', 'info', 'log_hyperparameters', 'login', 'on_test_run_end', 'version']

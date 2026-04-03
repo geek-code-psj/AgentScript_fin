@@ -1,0 +1,7 @@
+{
+  "ir_lowering_ms": 1.1089680000441149,
+  "lexer_tokens_per_second": 263662.3046987308,
+  "memory_search_ms": 0.20628099999157712,
+  "parser_ms": 0.9923490000073797,
+  "runtime_ms": 2.606204999028705
+}

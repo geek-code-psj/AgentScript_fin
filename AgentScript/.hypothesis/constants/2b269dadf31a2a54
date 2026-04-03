@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\plugins\plugin.py
+# hypothesis_version: 6.151.9
+
+['--identifier', '::', 'file_or_dir', 'identifier', 'skipped', 'store']

@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\models\embedding_models\local_embedding_model.py
+# hypothesis_version: 6.151.9
+
+['/', 'LocalEmbeddingModel', 'OpenAI', 'base_url', 'max_retries', 'model']

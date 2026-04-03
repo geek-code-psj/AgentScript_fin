@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\kgb\ops.py
+# hypothesis_version: 6.151.9
+
+['args', 'call_fake', 'call_original', 'expected_calls', 'kwargs', 'latest_call', 'num_calls', 'op', 'spy']

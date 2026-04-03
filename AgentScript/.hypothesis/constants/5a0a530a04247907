@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\models\llms\anthropic_model.py
+# hypothesis_version: 6.151.9
+
+[0.0, 1024, 'ANTHROPIC_API_KEY', 'ANTHROPIC_MODEL_NAME', 'Anthropic', 'AnthropicModel', '_anthropic_api_key', 'anthropic', 'api_key', 'base64', 'content', 'data', 'image', 'image/jpeg', 'max_retries', 'max_tokens', 'media_type', 'model', 'role', 'source', 'temperature', 'text', 'type', 'url', 'user']

@@ -1,0 +1,30 @@
+[
+  {
+    "source": "Indian Kanoon",
+    "span": "Bharat Penal Code theft appeal discussion under section 303",
+    "url": "https://indiankanoon.org/doc/3030001/",
+    "summary": "The judgment discusses appellate review of theft allegations and the evidentiary burden for recovery.",
+    "tags": ["bns", "theft", "appeal", "evidence"]
+  },
+  {
+    "source": "Supreme Court Digest",
+    "span": "Appellate standard for interfering with findings in theft prosecutions",
+    "url": "https://indiankanoon.org/doc/3030002/",
+    "summary": "Summarizes when appellate courts should interfere with trial findings in criminal theft matters.",
+    "tags": ["appeal", "criminal", "theft"]
+  },
+  {
+    "source": "Delhi High Court Notes",
+    "span": "Recovery, witness credibility, and chain of custody in a theft matter",
+    "url": "https://indiankanoon.org/doc/3030003/",
+    "summary": "Explains how recovery evidence and witness credibility affect the prosecution narrative in theft cases.",
+    "tags": ["theft", "evidence", "witness"]
+  },
+  {
+    "source": "Legal Commentary",
+    "span": "Transition note on BNS replacing IPC terminology in theft analysis",
+    "url": "https://indiankanoon.org/doc/3030004/",
+    "summary": "Provides a practitioner-friendly note on interpreting theft case law through the BNS terminology shift.",
+    "tags": ["bns", "commentary", "transition"]
+  }
+]

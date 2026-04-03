@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\models\llms\portkey_model.py
+# hypothesis_version: 6.151.9
+
+[30.0, 400, '/', 'Content-Type', 'PORTKEY_API_KEY', 'PORTKEY_BASE_URL', 'PORTKEY_MODEL_NAME', 'Portkey', 'application/json', 'base_url', 'choices', 'content', 'image_url', 'message', 'messages', 'model', 'provider', 'role', 'text', 'type', 'url', 'user', 'x-portkey-api-key', 'x-portkey-provider']

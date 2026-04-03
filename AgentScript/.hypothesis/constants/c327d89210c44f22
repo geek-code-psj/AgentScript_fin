@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\metrics\task_completion\task_completion.py
+# hypothesis_version: 6.151.9
+
+[0.5, 'Task Completion', 'outcome', 'reason', 'task', 'verdict']

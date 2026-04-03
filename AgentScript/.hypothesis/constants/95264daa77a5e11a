@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\kgb\spies.py
+# hypothesis_version: 6.151.9
+
+['        (%s)\n', '%s.%s of %r', '%s=None', ', ', '<string>', '__annotations__', '__kwdefaults__', '_kgb_forwarding_call', 'bound method', 'call', 'call_args', 'call_original', 'called', 'called_with', 'calls', 'classmethod', 'co_flags', 'co_name', 'co_qualname', 'code', 'error', 'exec', 'forwarding_call', 'func', 'function', 'if 1:\n%s', 'last_call', 'last_called_with', 'last_raised', 'last_returned', 'params', 'raised', 'raised_with_message', 'replace', 'reset_calls', 'returned', 'spy', 'spy_id', 'unbound method', 'unspy', 'use_closure_vars']

@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\opentelemetry\sdk\metrics\_internal\__init__.py
+# hypothesis_version: 6.151.9
+
+[10000, 30000, 'always_off', 'always_on', 'trace_based', 'true']

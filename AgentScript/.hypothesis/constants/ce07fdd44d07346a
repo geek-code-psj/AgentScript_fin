@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\pyasn1\codec\der\decoder.py
+# hypothesis_version: 6.151.9
+
+['StreamingDecoder', 'TAG_MAP', 'TYPE_MAP', 'decode', 'tagMap', 'typeMap']

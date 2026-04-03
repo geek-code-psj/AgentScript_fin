@@ -1,0 +1,4 @@
+# file: C:\Users\email\OneDrive\Documents\Playground\AgentScript\src\agentscript\runtime\tracing.py
+# hypothesis_version: 6.151.9
+
+['.jsonl', 'Event', 'ToolCall', 'ToolResult', '[REDACTED_API_KEY]', '[REDACTED_EMAIL]', '[REDACTED_PHONE]', 'a', 'agent_name', 'args', 'arguments', 'arguments_json', 'attempt', 'created_at', 'error', 'error_text', 'event_type', 'final_output_json', 'instruction_index', 'kind', 'latency_ms', 'message', 'ok', 'output', 'payload', 'payload_json', 'replayed', 'retries', 'run_finished', 'run_id', 'run_started', 'running', 'seq', 'source', 'status', 'status_code', 'step_id', 'timestamp', 'tool', 'tool_name', 'type', 'utf-8', 'workflow', 'workflow_name']

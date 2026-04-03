@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\metrics\api.py
+# hypothesis_version: 6.151.9
+
+[0.1, 0.2, 1.0, 'failure', 'llmTestCase', 'success', 'warning']

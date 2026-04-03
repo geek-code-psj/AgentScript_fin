@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\hydra\_internal\config_loader_impl.py
+# hypothesis_version: 6.151.9
+
+['\nSearch path:', '.', '[=]', 'defaults', 'hydra', 'hydra.searchpath', 'hydra/', 'hydra/config', 'main', 'name', 'package', 'pkg', 'readonly', 'schema', 'struct', 'structured://', 'value1,value2']

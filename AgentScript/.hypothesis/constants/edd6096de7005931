@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\models\embedding_models\__init__.py
+# hypothesis_version: 6.151.9
+
+['LocalEmbeddingModel', 'OllamaEmbeddingModel', 'OpenAIEmbeddingModel']

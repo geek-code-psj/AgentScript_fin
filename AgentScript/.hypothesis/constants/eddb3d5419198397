@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\metrics\topic_adherence\topic_adherence.py
+# hypothesis_version: 6.151.9
+
+[0.5, '\nFalse Negatives: ', '\nFalse Positives: ', '\nTrue Negatives: ', '\nTrue Positives:', 'Conversation: \n', 'FN', 'FP', 'TN', 'TP', 'Topic Adherence', 'Truth Table:', 'reason']

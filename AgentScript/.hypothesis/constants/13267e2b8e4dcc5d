@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\sentry_sdk\_metrics_batcher.py
+# hypothesis_version: 6.151.9
+
+[5.0, 1000, 10000, 'Any', 'Metric', 'attributes', 'name', 'queue_overflow', 'span_id', 'timestamp', 'trace_id', 'trace_metric', 'type', 'unit', 'value']

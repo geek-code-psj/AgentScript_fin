@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentscript"
+version = "0.1.0"
+description = "AgentScript: a typed, observable, fault-tolerant DSL for agentic workflows."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+  { name = "Prabal Pratap Singh Jadon" }
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "hypothesis>=6.112",
+  "pytest>=8.3",
+]
+memory = [
+  "chromadb>=0.5",
+]
+dashboard = [
+  "fastapi>=0.115",
+  "uvicorn>=0.32",
+]
+otel = [
+  "opentelemetry-api>=1.28",
+  "opentelemetry-sdk>=1.28",
+]
+
+[project.scripts]
+agentscript = "agentscript.cli.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-p no:cacheprovider"
+testpaths = ["tests"]
+pythonpath = ["src"]

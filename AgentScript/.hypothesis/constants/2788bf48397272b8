@@ -1,0 +1,4 @@
+# file: C:\Users\email\OneDrive\Documents\Playground\AgentScript\src\agentscript\observability\otel.py
+# hypothesis_version: 6.151.9
+
+['agentscript.runtime', 'client', 'error.type', 'internal', 'record_exception', 'set_attribute', 'set_status']

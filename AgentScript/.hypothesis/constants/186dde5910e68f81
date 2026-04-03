@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\models\embedding_models\azure_embedding_model.py
+# hypothesis_version: 6.151.9
+
+['/', 'AZURE_OPENAI_API_KEY', 'AzureOpenAI', 'OPENAI_API_VERSION', 'api_key', 'api_version', 'azure_deployment', 'azure_endpoint', 'base_url', 'deployment_name', 'max_retries', 'openai_api_key']

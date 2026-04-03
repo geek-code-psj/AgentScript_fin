@@ -1,0 +1,36 @@
+{
+  "name": "agentscript-language-tools",
+  "displayName": "AgentScript Language Tools",
+  "description": "Syntax highlighting and snippets for AgentScript DSL files.",
+  "version": "0.1.0",
+  "publisher": "prabaljadon",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": ["Programming Languages"],
+  "activationEvents": ["onLanguage:agentscript"],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "agentscript",
+        "aliases": ["AgentScript", "agentscript"],
+        "extensions": [".as"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "agentscript",
+        "scopeName": "source.agentscript",
+        "path": "./syntaxes/agentscript.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "agentscript",
+        "path": "./snippets/agentscript.code-snippets"
+      }
+    ]
+  }
+}

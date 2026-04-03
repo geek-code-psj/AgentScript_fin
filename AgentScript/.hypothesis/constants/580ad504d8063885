@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\models\llms\amazon_bedrock_model.py
+# hypothesis_version: 6.151.9
+
+[0.0, '/', 'AWS_BEDROCK_REGION', 'AmazonBedrockModel', 'JPEG', 'JPG', 'adaptive', 'aiobotocore.session', 'aws_access_key_id', 'aws_session_token', 'bedrock-runtime', 'botocore', 'bytes', 'config', 'content', 'cost_per_input_token', 'format', 'image', 'image/jpeg', 'inferenceConfig', 'inputTokens', 'input_token_cost', 'max_attempts', 'message', 'messages', 'mode', 'model', 'model_id', 'output', 'outputTokens', 'output_token_cost', 'region', 'region_name', 'role', 'source', 'stopReason', 'text', 'usage', 'user']

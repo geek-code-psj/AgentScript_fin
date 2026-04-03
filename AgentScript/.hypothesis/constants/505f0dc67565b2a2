@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\dataset\dataset.py
+# hypothesis_version: 6.151.9
+
+[100, '%Y%m%d_%H%M%S', '.2f', ';', 'AsyncConfig', 'CacheConfig', 'DisplayConfig', 'ErrorConfig', '[]', 'actual_output', 'additional_metadata', 'alias', 'comments', 'context', 'csv', 'dict', 'expected_outcome', 'expected_output', 'expected_tools', 'finalized', 'goldens', 'id', 'input', 'json', 'jsonl', 'model_dump', 'name', 'public', 'r', 'retrieval_context', 'rgb(106,0,255)', 'scenario', 'source_file', 'start_otel_test_run', 'stop_otel_test_run', 'tools_called', 'traceable evaluate()', 'turns', 'user_description', 'utf-8', 'w', '|']

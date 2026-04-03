@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\antlr4\atn\SemanticContext.py
+# hypothesis_version: 6.151.9
+
+['&&', ':', 'AND', 'OR', 'isCtxDependent', 'opnds', 'predIndex', 'ruleIndex', '{', '||', '}?']

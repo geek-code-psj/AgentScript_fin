@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\metrics\arena_g_eval\arena_g_eval.py
+# hypothesis_version: 6.151.9
+
+['reason', 'rewritten_reason', 'steps', 'winner']

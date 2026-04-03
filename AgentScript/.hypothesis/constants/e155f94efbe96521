@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\sentry_sdk\__init__.py
+# hypothesis_version: 6.151.9
+
+['Client', 'HttpTransport', 'Hub', 'Scope', 'Transport', 'VERSION', 'add_attachment', 'add_breadcrumb', 'capture_event', 'capture_exception', 'capture_message', 'configure_scope', 'continue_trace', 'end_session', 'flush', 'get_baggage', 'get_client', 'get_current_scope', 'get_current_span', 'get_global_scope', 'get_isolation_scope', 'get_traceparent', 'init', 'integrations', 'is_initialized', 'isolation_scope', 'last_event_id', 'logger', 'metrics', 'monitor', 'new_scope', 'profiler', 'push_scope', 'remove_attribute', 'set_attribute', 'set_context', 'set_extra', 'set_level', 'set_measurement', 'set_tag', 'set_tags', 'set_transaction_name', 'set_user', 'start_session', 'start_span', 'start_transaction', 'trace', 'update_current_span']

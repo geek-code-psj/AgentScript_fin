@@ -1,0 +1,85 @@
+{
+  "name": "AgentScript",
+  "scopeName": "source.agentscript",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#keywords" },
+    { "include": "#types" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#functions" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.agentscript",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.line.hash.agentscript",
+          "match": "#.*$"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.agentscript",
+          "match": "\\b(agent|workflow|tool|type|let|step|using|if|else|return|import)\\b"
+        },
+        {
+          "name": "keyword.other.policy.agentscript",
+          "match": "\\b(retry|fallback|circuit_breaker|mem_search)\\b"
+        },
+        {
+          "name": "constant.language.agentscript",
+          "match": "\\b(true|false|null)\\b"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "storage.type.agentscript",
+          "match": "\\b(string|int|float|bool|Claim|Citation|Intent|Embedding|MemoryEntry|list)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.agentscript",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.agentscript",
+              "match": "\\\\[nrt\"\\\\]"
+            }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.float.agentscript",
+          "match": "\\b\\d+\\.\\d+\\b"
+        },
+        {
+          "name": "constant.numeric.integer.agentscript",
+          "match": "\\b\\d+\\b"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "entity.name.function.agentscript",
+          "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*(?=\\s*\\()"
+        }
+      ]
+    }
+  }
+}

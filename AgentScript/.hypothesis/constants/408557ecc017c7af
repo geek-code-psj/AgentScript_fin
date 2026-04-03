@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\hydra\core\override_parser\overrides_parser.py
+# hypothesis_version: 6.151.9
+
+['OverridesParser', 'bool', 'choice', 'float', 'glob', 'int', 'interval', 'key', 'override', 'package', 'packageOrGroup', 'range', 'shuffle', 'sort', 'str', 'tag']

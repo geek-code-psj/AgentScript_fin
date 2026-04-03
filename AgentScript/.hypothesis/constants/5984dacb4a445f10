@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\google\auth\crypt\es.py
+# hypothesis_version: 6.151.9
+
+[b'-----BEGIN CERTIFICATE-----', 'ES256', 'ES384', 'EsSigner', 'EsVerifier', '_key', 'big']

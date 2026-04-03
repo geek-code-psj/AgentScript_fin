@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\google\genai\operations.py
+# hypothesis_version: 6.151.9
+
+['/operations/', 'T', '_query', '_url', 'config', 'get', 'http_options', 'operationName', 'operation_id', 'operation_name', 'post', 'resourceName', 'resource_name', '{operationName}']

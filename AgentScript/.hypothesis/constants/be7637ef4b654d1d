@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\sentry_sdk\integrations\__init__.py
+# hypothesis_version: 6.151.9
+
+[209, 500, 600, '\n- `{}`', '.', 'List[str]', 'Optional[str]', 'Set[str]', 'aiohttp', 'anthropic', 'ariadne', 'arq', 'asyncpg', 'beam', 'boto3', 'bottle', 'celery', 'chalice', 'clickhouse_driver', 'cohere', 'django', 'dramatiq', 'falcon', 'fastapi', 'flask', 'google_genai', 'gql', 'graphene', 'grpc', 'httpx', 'huggingface_hub', 'langchain', 'langgraph', 'launchdarkly', 'litellm', 'loguru', 'mcp', 'openai', 'openai_agents', 'openfeature', 'pydantic_ai', 'pymongo', 'quart', 'ray', 'requests', 'rq', 'sanic', 'sqlalchemy', 'starlette', 'starlite', 'statsig', 'str', 'strawberry', 'tornado', 'type[Integration]', 'typer', 'unleash']

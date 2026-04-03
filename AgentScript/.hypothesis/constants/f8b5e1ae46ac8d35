@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\grpc\aio\_interceptor.py
+# hypothesis_version: 6.151.9
+
+['ClientCallDetails', 'credentials', 'metadata', 'method', 'timeout', 'wait_for_ready']

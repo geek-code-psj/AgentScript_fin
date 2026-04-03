@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\pyasn1\type\base.py
+# hypothesis_version: 6.151.9
+
+['%s %s object', '%s -> %s', '%s at %s', ', ', ', %s %s', ', %s=%r', ', payload [%s]', '...', '<%s object>', '<%s>', 'Asn1Item', 'Asn1Type', 'ConstructedAsn1Type', 'SimpleAsn1Type', '_', '__', '__class__', '__del__', '__delattr__', '__getattr__', '__getattribute__', '__getinitargs__', '__getnewargs__', '__getstate__', '__init__', '__new__', '__objclass__', '__qualname__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__slots__', 'cloneValueFlag', 'componentType', 'explicitTag', 'im_class', 'implicitTag', 'schema', 'sizeSpec', 'subtypeSpec', 'tagSet', 'value']

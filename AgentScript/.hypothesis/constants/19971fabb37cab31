@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\test_case\conversational_test_case.py
+# hypothesis_version: 6.151.9
+
+['_mcp_interaction', 'additionalMetadata', 'additional_metadata', 'after', 'assistant', 'before', 'chatbotRole', 'chatbot_role', 'content', 'context', 'expectedOutcome', 'expected_outcome', 'mcp_prompts_called', 'mcp_resources_called', 'mcp_servers', 'mcp_tools_called', 'retrievalContext', 'retrieval_context', 'role', 'scenario', 'toolsCalled', 'tools_called', 'turns', 'user', 'userDescription', 'userId', 'user_description', 'user_id']

@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\kgb\__init__.py
+# hypothesis_version: 6.151.9
+
+[' %s %s', ' (dev)', ' RC%s', '%s%s%s', '%s.%s', '.%s', 'SpyAgency', 'SpyOpMatchAny', 'SpyOpMatchInOrder', 'SpyOpRaise', 'SpyOpRaiseInOrder', 'SpyOpReturn', 'SpyOpReturnInOrder', 'VERSION', '__version__', '__version_info__', 'a', 'alpha', 'b', 'beta', 'final', 'get_package_version', 'get_version_string', 'is_release', 'rc', 'spy_on']

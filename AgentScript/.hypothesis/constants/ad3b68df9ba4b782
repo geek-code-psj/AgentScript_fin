@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\pyasn1\type\tag.py
+# hypothesis_version: 6.151.9
+
+[128, 192, '%s:%s:%s', '-', '<%s object, %s>', '<%s object, tag %s>', 'Tag', 'TagSet', '[%s:%s:%s]', 'tagCategoryExplicit', 'tagCategoryImplicit', 'tagCategoryUntagged', 'tagClassApplication', 'tagClassContext', 'tagClassPrivate', 'tagClassUniversal', 'tagFormatConstructed', 'tagFormatSimple', 'tags ', 'untagged']

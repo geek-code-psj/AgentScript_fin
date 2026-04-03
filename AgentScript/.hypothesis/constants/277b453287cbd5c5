@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\pyasn1\codec\ber\decoder.py
+# hypothesis_version: 6.151.9
+
+[0.0, 127, 128, 192, '  %s -> %s', '%s -> %r', '%s<%s at %s', '-inf', '<none>', '?', 'Decoder', 'Empty substrate', 'Illegal Real base', 'SET', 'StreamingDecoder', 'TAG_MAP', 'TYPE_MAP', 'Unknown NR (tag %s)', 'allowEoo', 'as explicit tag', 'as failure', 'asn1Object', 'big', 'but neither of: ', 'decode', 'decodeOpenTypes', 'explicitly ', 'inf', 'native', 'non-', 'openTypes', 'recursiveFlag', 'substrateFun', 'tagMap', 'typeMap', 'un', 'value']

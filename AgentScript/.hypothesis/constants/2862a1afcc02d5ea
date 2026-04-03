@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\pyasn1\type\univ.py
+# hypothesis_version: 6.151.9
+
+[126, '"%s"', '%.2x', '%s -> %s {\n', '%s = %s\n', '%s=%s\n', "'", "'B", "'H", ',', '-', '-inf', '.', '0', '0b', '0x', '1', ':\n', '<empty>', '<overflow>', 'Any', 'BitString', 'Boolean', 'Choice', 'Component not chosen', 'Enumerated', 'False', 'Integer', 'Name %s not found', 'NoValue', 'Null', 'ObjectIdentifier', 'OctetString', 'Real', 'Sequence', 'SequenceAndSetBase', 'SequenceOf', 'Set', 'SetOf', 'True', 'big', 'binValue', 'componentType', 'encoding', 'field-%d', 'hexValue', 'inf', 'iso-8859-1', 'namedValues', 'noValue', 'subtypeSpec', 'tagSet', '}']

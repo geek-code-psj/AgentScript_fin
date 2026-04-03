@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\metrics\pii_leakage\pii_leakage.py
+# hypothesis_version: 6.151.9
+
+[0.5, '.2f', 'PII Leakage', 'extracted_pii', 'no', 'reason', 'verdicts', 'yes']

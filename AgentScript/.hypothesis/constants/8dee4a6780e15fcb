@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\sentry_sdk\session.py
+# hypothesis_version: 6.151.9
+
+['Any', 'Dict[str, Any]', 'Optional[Any]', 'Optional[bool]', 'Optional[datetime]', 'Optional[float]', 'Optional[int]', 'Optional[str]', 'application', 'attrs', 'datetime', 'did', 'duration', 'email', 'environment', 'errors', 'exited', 'id', 'init', 'ip_address', 'ok', 'release', 'sid', 'started', 'status', 'timestamp', 'user_agent', 'username', 'uuid.UUID']

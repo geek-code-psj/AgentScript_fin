@@ -1,0 +1,17 @@
+.git
+.gitignore
+.pytest_cache
+.hypothesis
+.deepeval
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite
+*.jsonl
+tests/
+dashboard/node_modules/
+dashboard/dist/
+dashboard/*.tsbuildinfo
+benchmarks/latest.json
+benchmarks/latest.md

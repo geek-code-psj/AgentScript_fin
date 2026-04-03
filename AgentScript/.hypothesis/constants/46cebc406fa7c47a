@@ -1,0 +1,4 @@
+# file: C:\Users\email\OneDrive\Documents\Playground\AgentScript\src\agentscript\compiler\tokens.py
+# hypothesis_version: 6.151.9
+
+['agent', 'circuit_breaker', 'else', 'emits', 'fallback', 'false', 'if', 'import', 'let', 'memory', 'null', 'retry', 'return', 'step', 'tool', 'true', 'type', 'using', 'workflow']

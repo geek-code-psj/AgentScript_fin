@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\confident\api.py
+# hypothesis_version: 6.151.9
+
+[200, '/', '/v1/annotations', '/v1/datasets/:alias', '/v1/evaluate', '/v1/experiment', '/v1/metric-data', '/v1/metrics', '/v1/prompts', '/v1/simulate', '/v1/test-run', '/v1/traces', 'AU', 'CONFIDENT-API-KEY', 'CONFIDENT_API_KEY', 'Content-Type', 'DELETE', 'EU', 'GET', 'POST', 'PUT', 'Request failed', 'US', 'X-DeepEval-Version', 'application/json', 'confident_au_', 'confident_eu_', 'confident_us_', 'error', 'error_data']

@@ -1,0 +1,4 @@
+# file: C:\Users\email\OneDrive\Documents\Playground\AgentScript\evals\run_regressions.py
+# hypothesis_version: 6.151.9
+
+[0.0, 1.0, 'BNS theft appeal', '__main__', 'bad-model', 'candidate', 'claim', 'confidence', 'divergence', 'divergence_step_id', 'evals', 'expected', 'fallback_calls', 'happy', 'max_confidence', 'min_confidence', 'mode', 'name', 'query', 'reference.sqlite', 'replayed', 'replayed.sqlite', 'rules', 'search_calls', 'src', 'state', 'step_id', 'tests', 'utf-8']

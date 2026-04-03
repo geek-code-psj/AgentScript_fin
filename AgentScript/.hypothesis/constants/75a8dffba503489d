@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\pyasn1\type\useful.py
+# hypothesis_version: 6.151.9
+
+[1000, 3600, '%.2d%.2d', '%Y%m%d%H%M%S', '%y%m%d%H%M%S', '+', ',', '-', '.', '.%d', '00', '0000', '?', 'GeneralizedTime', 'ObjectDescriptor', 'UTC', 'UTCTime', 'Z']

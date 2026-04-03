@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\kgb\signature.py
+# hypothesis_version: 6.151.9
+
+['%s=%s', '*%s', '**%s', ', ', '.', '<locals>', '=_UNSET_ARG', '_UNSET_ARG', '__closure__', '__code__', '__defaults__', '__func__', '__get__', '__globals__', '__name__', '__self__', '__set__', 'arg', 'func_closure', 'func_code', 'func_defaults', 'func_globals', 'func_name', 'im_self', 'kgb']

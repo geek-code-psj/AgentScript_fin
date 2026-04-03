@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\models\llms\openrouter_model.py
+# hypothesis_version: 6.151.9
+
+[0.0, 30.0, '/', 'OPENROUTER_API_KEY', 'OpenRouter', 'additionalProperties', 'content', 'cost', 'json_schema', 'max_retries', 'name', 'role', 'schema', 'strict', 'temperature', 'timeout', 'type', 'usage', 'user']

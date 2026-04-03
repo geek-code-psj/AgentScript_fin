@@ -1,0 +1,4 @@
+# file: C:\Users\email\OneDrive\Documents\Playground\AgentScript\src\agentscript\observability\store.py
+# hypothesis_version: 6.151.9
+
+[0.0, 1000.0, 'agent_name', 'args_json', 'arguments_json', 'attempt', 'circuit-open', 'error_text', 'events', 'final_output', 'final_output_json', 'finished_at', 'formatted', 'jsonl_path', 'key', 'latency_ms', 'memory', 'ok', 'payload_json', 'replay', 'replayed', 'retries', 'run', 'run_id', 'semantic_indexed', 'seq', 'source', 'started_at', 'status', 'status_code', 'step_id', 'summary', 'timeline', 'timestamp', 'tool_name', 'unknown', 'value', 'workflow_name']

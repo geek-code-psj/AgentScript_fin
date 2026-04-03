@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\pyasn1\type\char.py
+# hypothesis_version: 6.151.9
+
+['BMPString', 'GeneralString', 'GraphicString', 'IA5String', 'ISO646String', 'NumericString', 'PrintableString', 'T61String', 'TeletexString', 'UTF8String', 'UniversalString', 'VideotexString', 'VisibleString', 'iso-8859-1', 'us-ascii', 'utf-16-be', 'utf-32-be', 'utf-8']

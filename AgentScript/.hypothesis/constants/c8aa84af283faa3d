@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\sentry_sdk\profiler\utils.py
+# hypothesis_version: 6.151.9
+
+[101, 128, 'Deque[FrameType]', 'ExtractedStack', 'FrameId', 'FrameType', 'LRUCache', 'Optional[FrameType]', 'ProcessedFrame', '__name__', 'abs_path', 'cls', 'filename', 'function', 'lineno', 'module', 'name', 'self', '{}.{}']

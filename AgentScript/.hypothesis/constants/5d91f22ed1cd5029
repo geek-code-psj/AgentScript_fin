@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\pyasn1\type\tagmap.py
+# hypothesis_version: 6.151.9
+
+['%s object', ', default %s', ', present %s', ', skip %s', '<%s>', 'Key in negative map', 'TagMap']

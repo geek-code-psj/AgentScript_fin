@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\models\llms\openai_model.py
+# hypothesis_version: 6.151.9
+
+[0.0, 30.0, '/', 'GPTModel', 'OPENAI_API_KEY', 'OpenAI', '_openai_api_key', 'api_key', 'async_http_client', 'content', 'http_client', 'image_url', 'json_object', 'max_retries', 'role', 'temperature', 'text', 'timeout', 'type', 'url', 'user']

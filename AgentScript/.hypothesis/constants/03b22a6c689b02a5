@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\antlr4\atn\ATN.py
+# hypothesis_version: 6.151.9
+
+['decisionToState', 'grammarType', 'lexerActions', 'maxTokenType', 'modeNameToStartState', 'modeToStartState', 'ruleToStartState', 'ruleToStopState', 'ruleToTokenType', 'states']

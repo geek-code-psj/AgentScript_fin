@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\sentry_sdk\hub.py
+# hypothesis_version: 6.151.9
+
+['Any', 'Callable[[], T]', 'Dict[str, Any]', 'Event', 'Hub', 'List[Hub]', 'List[Scope]', 'Optional[Any]', 'Optional[BaseClient]', 'Optional[Breadcrumb]', 'Optional[Hint]', 'Optional[Hub]', 'Optional[None]', 'Optional[Scope]', 'Optional[Span]', 'Optional[float]', 'Optional[str]', 'Optional[type]', 'Scope', 'Span', 'T', 'Transaction', 'application', 'hub', 'ignore', 'sentry_current_hub', 'transaction', 'type']

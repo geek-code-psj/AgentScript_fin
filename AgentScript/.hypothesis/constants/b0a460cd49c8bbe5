@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\sentry_sdk\scrubber.py
+# hypothesis_version: 6.151.9
+
+['Event', 'Optional[List[str]]', 'PHPSESSID', 'XSRF-TOKEN', '_csrf', '_csrf_token', '_session', '_xsrf', 'aiohttp_session', 'api_key', 'apikey', 'auth', 'authorization', 'breadcrumbs', 'connect.sid', 'cookie', 'cookies', 'credentials', 'csrf', 'csrf_token', 'csrftoken', 'data', 'extra', 'headers', 'ip_address', 'mysql_pwd', 'passwd', 'password', 'private_key', 'privatekey', 'remote_addr', 'request', 'secret', 'session', 'sessionid', 'set_cookie', 'spans', 'symfony', 'token', 'user', 'user_session', 'values', 'vars', 'x_api_key', 'x_csrftoken', 'x_forwarded_for', 'x_real_ip']

@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\omegaconf\basecontainer.py
+# hypothesis_version: 6.151.9
+
+['=', 'BaseContainer', 'DictConfig', 'None', '_content', '_flags_cache', '_metadata', 'allow_objects', 'readonly']

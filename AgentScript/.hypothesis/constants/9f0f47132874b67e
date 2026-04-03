@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\models\llms\local_model.py
+# hypothesis_version: 6.151.9
+
+[0.0, '/', 'LOCAL_MODEL_API_KEY', 'LOCAL_MODEL_NAME', 'Local', 'LocalModel', 'content', 'content-type', 'image/jpeg', 'image_url', 'json', 'max_retries', 'model', 'role', 'temperature', 'text', 'type', 'url', 'user', 'utf-8']

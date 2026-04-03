@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\rsa\pem.py
+# hypothesis_version: 6.151.9
+
+[b'\n', b'-----', b'-----BEGIN ', b'-----END ', b':', 'ascii']

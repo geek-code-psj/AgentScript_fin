@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\prompt\api.py
+# hypothesis_version: 6.151.9
+
+['ALLOW_ADDITIONAL', 'ANTHROPIC', 'BEDROCK', 'BOOLEAN', 'DEEPSEEK', 'DOLLAR_BRACKETS', 'FLOAT', 'FSTRING', 'GEMINI', 'HIGH', 'INTEGER', 'JINJA', 'JSON', 'LIST', 'LOW', 'MEDIUM', 'MINIMAL', 'MUSTACHE', 'MUSTACHE_WITH_SPACE', 'NO_ADDITIONAL', 'NULL', 'OBJECT', 'OPENROUTER', 'OPEN_AI', 'SCHEMA', 'STRICT', 'STRING', 'TEXT', 'X_AI', 'after', 'frequencyPenalty', 'frequency_penalty', 'interpolationType', 'maxTokens', 'max_tokens', 'messagesVersions', 'messages_versions', 'modelSettings', 'model_settings', 'outputSchema', 'outputType', 'output_schema', 'output_type', 'parentId', 'parent_id', 'presencePenalty', 'presence_penalty', 'reasoningEffort', 'reasoning_effort', 'stopSequence', 'stop_sequence', 'structuredSchema', 'structured_schema', 'textVersions', 'text_versions', 'topP', 'top_p', 'verbosity']

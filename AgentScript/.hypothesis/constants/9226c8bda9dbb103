@@ -1,0 +1,4 @@
+# file: C:\Users\email\OneDrive\Documents\Playground\AgentScript\src\agentscript\compiler\semantics.py
+# hypothesis_version: 6.151.9
+
+[' -> ', '!=', '*', '+', ', ', '-', '/', '<', '<=', '<memory>', '==', '>', '>=', 'Citation', 'Claim', 'Embedding', 'Intent', 'MemoryEntry', 'Scope | None', 'SemanticType', 'backoff', 'bool', 'confidence', 'dim', 'float', 'int', 'key', 'list', 'mem_search', 'name', 'null', 'query', 'score', 'source', 'span', 'string', 'text', 'threshold', 'tools', 'type aliases', 'url', 'value', 'vector', 'workflows']

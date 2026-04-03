@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\telemetry.py
+# hypothesis_version: 6.151.9
+
+[1.0, 200, '.deepeval-cache.json', '.deepeval_temp', '=', 'DEEPEVAL_ID', 'DEEPEVAL_STATUS', 'IPKernelApp', 'Invoked synthesizer', 'LOGGED_IN_WITH', 'Login', 'NA', 'Pull', 'Ran benchmark', 'Ran guardrails', 'Recommend', 'Send Trace', 'Unknown', 'View', 'async_mode', 'benchmark', 'completed', 'component_evaluation', 'environment', 'evaluation', 'exc_type', 'exc_value', 'guardrail', 'in_component', 'jupyter', 'last_feature', 'logged_in_with', 'login_prompt', 'max_generations', 'method', 'new', 'num_conversations', 'num_evolutions', 'num_tasks', 'old', 'other', 'r', 'redteaming', 'synthesizer', 'telemetry-opted-out', 'tracing_integration', 'unknown', 'user.public_ip', 'user.status', 'user.unique_id', 'w', 'www.google.com']

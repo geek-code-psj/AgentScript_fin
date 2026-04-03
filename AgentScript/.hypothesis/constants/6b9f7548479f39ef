@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\redis\observability\recorder.py
+# hypothesis_version: 6.151.9
+
+[0.0, 1000, '-', '7.2.1', 'OTelConfig', 'SyncDatabase', 'batch_size', 'connection_count', 'consumer_name', 'csc_items']

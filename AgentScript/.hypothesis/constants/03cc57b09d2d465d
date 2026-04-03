@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\metrics\tool_use\tool_use.py
+# hypothesis_version: 6.151.9
+
+[0.5, ',', 'Tool Use', 'assistant', 'reason', 'user']

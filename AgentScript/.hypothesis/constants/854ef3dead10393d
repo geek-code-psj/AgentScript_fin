@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\posthog\exception_capture.py
+# hypothesis_version: 6.151.9
+
+['Client', 'distinct_id', 'django', 'posthog']

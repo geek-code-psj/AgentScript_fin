@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\sentry_sdk\traces.py
+# hypothesis_version: 6.151.9
+
+[400, 'AttributeValue', 'Attributes', 'Optional[Attributes]', 'Optional[str]', '_attributes', '_flags', '_name', '_span_id', '_status', '_trace_id', 'component', 'custom', 'endpoint', 'error', 'function_name', 'handler_name', 'ok', 'path', 'route', 'route_name', 'route_pattern', 'sentry.op', 'sentry.origin', 'sentry.span.source', 'task', 'uri_template', 'url', 'view']

@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\redis\commands\policies.py
+# hypothesis_version: 6.151.9
+
+['.', 'AsyncPolicyResolver', 'PolicyResolver', 'aggregate', 'aliasadd', 'aliasdel', 'aliasupdate', 'alter', 'command', 'core', 'create', 'cursor', 'dictadd', 'dictdel', 'dictdump', 'drop', 'dropindex', 'explain', 'explaincli', 'ft', 'info', 'profile', 'search', 'spellcheck', 'sugadd', 'sugdel', 'sugget', 'suglen', 'syndump', 'synupdate', 'tagvals']

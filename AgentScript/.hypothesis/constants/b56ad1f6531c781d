@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\sentry_sdk\profiler\__init__.py
+# hypothesis_version: 6.151.9
+
+['GeventScheduler', 'MAX_STACK_DEPTH', 'Profile', 'Scheduler', 'ThreadScheduler', 'extract_frame', 'extract_stack', 'frame_id', 'get_frame_name', 'setup_profiler', 'start_profiler', 'stop_profile_session', 'stop_profiler', 'teardown_profiler']

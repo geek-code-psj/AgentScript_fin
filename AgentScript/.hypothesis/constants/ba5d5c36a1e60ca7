@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\opentelemetry\sdk\metrics\_internal\point.py
+# hypothesis_version: 6.151.9
+
+['data', 'data_points', 'description', 'is_monotonic', 'metrics', 'name', 'resource', 'resource_metrics', 'schema_url', 'scope', 'scope_metrics', 'unit']

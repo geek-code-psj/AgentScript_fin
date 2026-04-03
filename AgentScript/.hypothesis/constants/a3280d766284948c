@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\openai\types\responses\response_input_audio.py
+# hypothesis_version: 6.151.9
+
+['InputAudio', 'ResponseInputAudio', 'input_audio', 'mp3', 'wav']

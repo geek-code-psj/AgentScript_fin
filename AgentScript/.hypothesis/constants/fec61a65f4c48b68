@@ -1,0 +1,4 @@
+# file: C:\Users\email\OneDrive\Documents\Playground\AgentScript\src\agentscript\cli\main.py
+# hypothesis_version: 6.151.9
+
+[8000, '--agent', '--arg', '--demo', '--dump-json', '--host', '--mode', '--port', '--replay-from', '--replay-run-id', '--run-id', '--trace', '--workflow', '127.0.0.1', '=', 'Dashboard host.', 'Dashboard port.', '__main__', 'agentscript', 'append', 'bad-model', 'check', 'command', 'compile', 'dashboard', 'demo_state', 'fallback_calls', 'filter_calls', 'happy', 'info', 'legal', 'legal_research.as', 'lex', 'mode', 'outage', 'output', 'parse', 'path', 'replay', 'retry', 'run', 'run_id', 'runs', 'search_calls', 'selected_run', 'store_true', 'summary_calls', 'trace_path', 'workflow']

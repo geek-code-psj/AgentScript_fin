@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\openai\_module_client.py
+# hypothesis_version: 6.151.9
+
+['Audio', 'Batches', 'Beta', 'Chat', 'Completions', 'Containers', 'Conversations', 'Embeddings', 'Evals', 'Files', 'FineTuning', 'Images', 'Models', 'Moderations', 'Realtime', 'Responses', 'Skills', 'Uploads', 'VectorStores', 'Videos', 'Webhooks']

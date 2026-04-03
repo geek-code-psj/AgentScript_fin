@@ -1,0 +1,4 @@
+# file: C:\Users\email\OneDrive\Documents\Playground\AgentScript\src\agentscript\observability\server.py
+# hypothesis_version: 6.151.9
+
+[404, '*', ',', '/', '/api/docs', '/api/meta', '/api/redoc', '/api/runs', '/api/runs/{run_id}', '/assets', '/dashboard/assets', '/health', 'assets', 'dashboard', 'dashboard-assets', 'dashboard_built', 'dist', 'index.html', 'memory', 'ok', 'runs', 'timeline', 'trace_path', 'version']

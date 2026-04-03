@@ -1,0 +1,31 @@
+{
+  "Agent": {
+    "prefix": "agent",
+    "body": [
+      "agent ${1:name} {",
+      "  retry(${2:3}, backoff=exponential)",
+      "  fallback {",
+      "    step ${3:cached} using ${4:tool_name}(${5:query=query})",
+      "  }",
+      "  circuit_breaker(threshold=${6:0.50})",
+      "}"
+    ],
+    "description": "Agent policy with retry, fallback, and circuit breaker"
+  },
+  "Workflow": {
+    "prefix": "workflow",
+    "body": [
+      "workflow ${1:name}(${2:query}: string) -> ${3:Claim} {",
+      "  ${4:return ${5:tool_name}(${2:query})}",
+      "}"
+    ],
+    "description": "AgentScript workflow"
+  },
+  "Tool": {
+    "prefix": "tool",
+    "body": [
+      "tool ${1:name}(${2:query}: string) -> ${3:string}"
+    ],
+    "description": "Tool declaration"
+  }
+}

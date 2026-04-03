@@ -1,0 +1,4 @@
+# file: C:\Users\email\OneDrive\Documents\Playground\AgentScript\src\agentscript\runtime\program.py
+# hypothesis_version: 6.151.9
+
+[1.0, 2.0, 16.0, 30.0, '<memory>', 'backoff', 'base_delay_seconds', 'cooldown_seconds', 'fixed', 'half_open_max_calls', 'max_delay_seconds', 'min_calls', 'threshold', 'utf-8', 'window']

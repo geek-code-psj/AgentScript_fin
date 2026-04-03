@@ -1,0 +1,4 @@
+# file: C:\Users\email\OneDrive\Documents\Playground\AgentScript\src\agentscript\runtime\interpreter.py
+# hypothesis_version: 6.151.9
+
+['!=', '*', '+', ', ', '-', '/', '<', '<=', '==', '>', '>=', 'args', 'arguments', 'attempt', 'backoff', 'branch', 'circuit-open', 'circuit_open', 'completed', 'condition', 'count', 'delay_seconds', 'error', 'exponential', 'failed', 'fallback_result', 'fallback_started', 'fallback_step', 'instruction', 'key', 'linear', 'mem_search', 'memory_write', 'opcode', 'parameter', 'query', 'reason', 'result', 'results', 'retry_scheduled', 'semantic_indexed', 'source', 'step', 'step_name', 'store', 'taken', 'target', 'tool-failure', 'tool_attempt', 'tool_failure', 'tool_name', 'tool_success', 'value', 'workflow_call', 'workflow_return', 'workflow_started']

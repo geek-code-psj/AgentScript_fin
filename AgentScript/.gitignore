@@ -1,0 +1,4 @@
+tests/*.sqlite
+tests/*.jsonl
+tests/.benchmark-artifacts/
+tests/.regression-artifacts/

@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\sentry_sdk\profiler\continuous_profiler.py
+# hypothesis_version: 6.151.9
+
+[1.0, 128, 256, '2', 'Any', 'Callable[..., bool]', 'Dict[FrameId, int]', 'Dict[StackId, int]', 'Dict[str, Any]', 'ExtractedSample', 'List[ProcessedFrame]', 'List[ProcessedStack]', 'Optional[int]', 'ProcessedSample', 'SDKInfo', 'Union[float, None]', 'Union[str, None]', '_experiments', 'chunk_id', 'client_sdk', 'dist', 'environment', 'frames', 'gevent', 'in_app_exclude', 'in_app_include', 'manual', 'name', 'platform', 'profile', 'profile_lifecycle', 'profiler_id', 'profiler_mode', 'project_root', 'python', 'release', 'samples', 'sleep', 'stack_id', 'stacks', 'thread', 'thread_id', 'thread_metadata', 'time', 'timestamp', 'trace', 'unknown', 'version']

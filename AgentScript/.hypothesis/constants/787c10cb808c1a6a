@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\google\genai\_interactions\types\interaction_status_update.py
+# hypothesis_version: 6.151.9
+
+['cancelled', 'completed', 'failed', 'in_progress', 'incomplete', 'requires_action']

@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\sentry_sdk\envelope.py
+# hypothesis_version: 6.151.9
+
+[b'\n', ', ', '<Payload %r>', 'Any', 'Envelope', 'Event', 'EventDataCategory', 'Item', 'Iterator[Item]', 'Optional[Any]', 'Optional[Event]', 'Optional[Item]', 'Optional[List[Item]]', 'Optional[bytes]', 'Optional[str]', 'Union[Session, Any]', 'Union[bytes, str]', 'application/json', 'attachment', 'check_in', 'client_report', 'content_type', 'default', 'error', 'event', 'filename', 'internal', 'length', 'log', 'log_item', 'monitor', 'platform', 'profile', 'profile_chunk', 'python', 'rb', 'replace', 'session', 'sessions', 'trace_metric', 'transaction', 'type', 'utf-8']

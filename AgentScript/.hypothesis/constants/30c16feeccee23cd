@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\pytest_rerunfailures.py
+# hypothesis_version: 6.151.9
+
+[b'\n', '--fail-on-flaky', '--only-rerun', '--rerun-except', '--reruns', '--reruns-delay', '1.20', '=', 'R', 'RERUN', '^', '_fixtureinfo', '_terminal_errors', 'append', 'cached_result', 'collectonly', 'condition', 'config', 'eval', 'execution_count', 'f', 'fail_on_flaky', 'failed', 'flaky', 'get', 'localhost', 'markers', 'name2fixturedefs', 'obj', 'only_rerun', 'os', 'platform', 'pytest-xdist', 'r', 'rR', 'rerun', 'rerun_except', 'rerunfailures', 'reruns', 'reruns_delay', 'set', 'setup', 'slaveinput', 'sock_port', 'store', 'store_true', 'string', 'sys', 'wasxfail', 'workerinput', 'xdist', 'yellow', '|']

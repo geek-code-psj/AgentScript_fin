@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\test_run\cache.py
+# hypothesis_version: 6.151.9
+
+['assessment_questions', 'criteria', 'embeddings', 'evaluation_model', 'evaluation_params', 'evaluation_steps', 'hyperparameters', 'include_reason', 'language', 'n', 'r', 'strict_mode', 'threshold', 'w']

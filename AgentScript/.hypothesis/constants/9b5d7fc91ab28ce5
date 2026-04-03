@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\google\auth\crypt\_python_rsa.py
+# hypothesis_version: 6.151.9
+
+[b'-----BEGIN CERTIFICATE-----', 128, 'CERTIFICATE', 'DER', 'PEM', 'SHA-256', 'Unused bytes', 'privateKey', 'subjectPublicKey', 'subjectPublicKeyInfo', 'tbsCertificate']

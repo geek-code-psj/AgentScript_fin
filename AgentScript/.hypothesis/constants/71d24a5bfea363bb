@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\dataset\utils.py
+# hypothesis_version: 6.151.9
+
+[',\\s*([\\]}])', '\\1', 'actual_output', 'additional_metadata', 'content', 'context', 'dict', 'expected_outcome', 'expected_output', 'expected_tools', 'input', 'mcp_prompts_called', 'mcp_resources_called', 'mcp_tools_called', 'model_dump', 'retrieval_context', 'role', 'scenario', 'tools_called', 'turns', 'user_description', 'user_id']

@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\models\llms\utils.py
+# hypothesis_version: 6.151.9
+
+[',\\s*([\\]}])', 'AzureModel', 'GPTModel', 'GeminiModel', 'OllamaModel', '\\1', '{', '}']

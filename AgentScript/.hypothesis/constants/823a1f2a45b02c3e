@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\utils.py
+# hypothesis_version: 6.151.9
+
+[0.1, 1024.0, 120, 240, '\x00', '#00e5ff', '#11ff00', '#5703ff', '(.)([A-Z][a-z]+)', '([a-z0-9])([A-Z])', ',\n    ', ', ', '...', '2', 'BUILDKITE', 'CI', 'CIRCLECI', 'DEEPEVAL', 'GITHUB_ACTIONS', 'GITLAB_CI', 'HEROKU_TEST_RUN_ID', 'JENKINS_URL', 'READ_ONLY', 'TEAMCITY_VERSION', 'TRAVIS', 'Will use GPU: %s', '[]', '\\1_\\2', '\\b(a|an|the)\\b', '__dict__', 'additionalMetadata', 'bar.complete', 'deepeval', 'name', 'progress.elapsed', 'progress.percentage', 'r', 'tmp_smi', 'userId', 'user_id']

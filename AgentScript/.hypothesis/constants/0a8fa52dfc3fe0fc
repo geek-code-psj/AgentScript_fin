@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\models\llms\gemini_model.py
+# hypothesis_version: 6.151.9
+
+[0.0, 'Client', 'GOOGLE_API_KEY', 'GeminiModel', 'Google Gemini', 'application/json', 'content-type', 'gemini-2.5-pro', 'google.genai', 'google.oauth2', 'image/jpeg', 'temperature']

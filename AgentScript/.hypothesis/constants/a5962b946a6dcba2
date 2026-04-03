@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\pyasn1\debug.py
+# hypothesis_version: 6.151.9
+
+[65535, '\n%.5d: ', '!', '%s%.2X', ', ', '.', '<python logging>', 'Debug', 'LOG', 'all', 'bad debug flag %s', 'decoder', 'disabled', 'enabled', 'encoder', 'hexdump', 'logger %s, flags %x', 'loggerName', 'none', 'printer', 'pyasn1', 'setLogger', '~']

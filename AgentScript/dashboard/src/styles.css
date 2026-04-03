@@ -1,0 +1,252 @@
+:root {
+  --bg: #f6efe5;
+  --bg-alt: #efe1cf;
+  --panel: rgba(255, 251, 244, 0.88);
+  --ink: #162126;
+  --muted: #52616a;
+  --line: rgba(22, 33, 38, 0.1);
+  --accent: #f26b1d;
+  --accent-cool: #0d8a86;
+  --danger: #c2410c;
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(242, 107, 29, 0.18), transparent 24rem),
+    radial-gradient(circle at bottom right, rgba(13, 138, 134, 0.22), transparent 26rem),
+    linear-gradient(180deg, var(--bg), var(--bg-alt));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 20rem 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  padding: 1.6rem;
+  border-right: 1px solid var(--line);
+  background: rgba(255, 248, 240, 0.72);
+  backdrop-filter: blur(16px);
+}
+
+.content {
+  padding: 1.6rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.4rem;
+  color: var(--accent-cool);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+.lede,
+.panel p,
+.empty {
+  color: var(--muted);
+}
+
+.run-list {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 2rem;
+}
+
+.run-pill {
+  text-align: left;
+  padding: 0.95rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.55);
+  display: grid;
+  gap: 0.2rem;
+  cursor: pointer;
+  transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+
+.run-pill:hover,
+.run-pill.is-active {
+  transform: translateY(-1px);
+  border-color: rgba(13, 138, 134, 0.4);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.banner {
+  padding: 1rem 1.1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  margin-bottom: 1rem;
+}
+
+.banner.error {
+  border-color: rgba(194, 65, 12, 0.24);
+  color: var(--danger);
+}
+
+.metrics-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.metric-card,
+.panel {
+  border-radius: 1.25rem;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 60px rgba(22, 33, 38, 0.08);
+}
+
+.metric-card {
+  padding: 1rem 1.1rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.metric-card span {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.metric-card strong {
+  font-size: 1.3rem;
+}
+
+.panel {
+  margin-top: 1rem;
+  padding: 1.1rem 1.2rem;
+}
+
+.panel.split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem;
+}
+
+.timeline {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: 15rem 1fr 10rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.timeline-row p {
+  margin: 0.15rem 0 0;
+}
+
+.timeline-bar {
+  height: 0.95rem;
+  border-radius: 999px;
+  background: rgba(22, 33, 38, 0.08);
+  overflow: hidden;
+}
+
+.timeline-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.timeline-fill.is-success {
+  background: linear-gradient(90deg, var(--accent-cool), #4bc0a4);
+}
+
+.timeline-fill.is-failed {
+  background: linear-gradient(90deg, var(--accent), var(--danger));
+}
+
+.timeline-meta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.memory-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.memory-row {
+  border-radius: 1rem;
+  padding: 0.9rem 1rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--line);
+  display: grid;
+  gap: 0.25rem;
+}
+
+.memory-row span {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.memory-row code,
+.replay-view {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.replay-view {
+  overflow: auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #13272b;
+  color: #f4ede1;
+  min-height: 20rem;
+}
+
+@media (max-width: 960px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .panel.split {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-row {
+    grid-template-columns: 1fr;
+  }
+}

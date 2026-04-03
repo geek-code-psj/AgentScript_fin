@@ -1,0 +1,227 @@
+# AgentScript
+
+AgentScript is a typed, observable, fault-tolerant DSL for agentic workflows.
+
+It is designed to feel more like a language runtime than a prompt wrapper:
+
+- LLM-native types such as `Claim`, `Citation`, `Intent`, and `Embedding`.
+- Fault-tolerance primitives declared in the language with `retry`, `fallback`, and `circuit_breaker`.
+- Replay-first execution, where traces are intended to drive deterministic replays.
+
+## Status
+
+This repository now contains the first eight milestones of the build:
+
+- language specification draft
+- Python package scaffold
+- token model
+- lexer implementation
+- starter CLI
+- starter lexer tests
+- recursive-descent parser
+- AST pretty printer
+- parser tests and fuzz-style safety coverage
+- semantic analyzer with built-in LLM-native types
+- callable and scope validation
+- flat IR lowering with dead-code elimination
+- explicit `TOOL_CALL` / `TOOL_RESULT` IR units for replay capture
+- async interpreter over the lowered IR
+- Python tool registry with decorator API
+- runtime environment chain for workflow frames
+- replay-ready Tool Gateway wrapping all tool calls
+- retry, fallback, and rolling-window circuit-breaker execution policies
+- session memory plus semantic memory search
+- JSONL + SQLite trace recording with redaction
+- deterministic replay using recorded tool results and a virtual clock
+- built-in `mem_search(...)` lowered to a dedicated IR opcode
+- Week 6 legal-research demo agent, corpus, and replay-climax test coverage
+- Week 7 trace store, FastAPI dashboard server, React dashboard source, CLI run/dashboard commands, and optional OpenTelemetry spans
+- Week 8 VS Code extension scaffold, benchmark harness, regression/eval suite, and presentation polish
+
+## Quick Start
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -e .[dev]
+pytest
+agentscript lex examples\legal_research.as
+agentscript parse examples\legal_research.as
+agentscript check examples\legal_research.as
+agentscript compile examples\legal_research.as
+agentscript run examples\legal_research.as --demo legal --workflow legal_brief --arg 'query="BNS theft appeal"' --mode retry --trace tests\legal-demo.sqlite
+agentscript dashboard tests\legal-demo.sqlite --dump-json
+python benchmarks\run_benchmarks.py
+python evals\run_regressions.py
+python examples\legal_demo.py --mode retry --trace tests\legal-demo.sqlite
+```
+
+If you want the optional Chroma-backed semantic store, FastAPI dashboard server, or OTel hooks:
+
+```bash
+pip install -e .[memory]
+pip install -e .[dashboard,otel]
+```
+
+## Docker Deployment
+
+You can now run the observability stack directly with Docker:
+
+```bash
+docker compose up --build
+```
+
+That will:
+
+- build the React dashboard bundle
+- install the AgentScript backend with dashboard and OTel extras
+- expose the dashboard at `http://127.0.0.1:8000`
+- persist traces in a Docker volume mounted at `/data`
+
+If you need different browser origins for local development, set `AGENTSCRIPT_CORS_ORIGINS` in [docker-compose.yml](C:/Users/email/OneDrive/Documents/Playground/AgentScript/docker-compose.yml).
+
+## Architecture
+
+```mermaid
+flowchart LR
+    A["AgentScript Source (.as)"] --> B["Lexer + Parser"]
+    B --> C["Semantic Analysis"]
+    C --> D["IR Lowering"]
+    D --> E["Async Runtime Engine"]
+    E --> F["Tool Gateway"]
+    E --> G["Memory Manager"]
+    F --> H["Live Tools"]
+    F --> I["Replay Source"]
+    F --> J["JSONL + SQLite Traces"]
+    J --> K["Trace Store"]
+    K --> L["FastAPI Dashboard API"]
+    K --> M["CLI Replay / Dashboard Dump"]
+    L --> N["React Dashboard"]
+```
+
+## Benchmark Snapshot
+
+Latest local benchmark output from [latest.md](C:/Users/email/OneDrive/Documents/Playground/AgentScript/benchmarks/latest.md):
+
+| Benchmark | Result |
+| --- | ---: |
+| Lexer throughput | 263,662 tokens/sec |
+| Parser | 0.992 ms |
+| IR lowering | 1.109 ms |
+| Runtime | 2.606 ms |
+| Memory search | 0.206 ms |
+
+The benchmark harness lives at [run_benchmarks.py](C:/Users/email/OneDrive/Documents/Playground/AgentScript/benchmarks/run_benchmarks.py) and writes both JSON and Markdown artifacts.
+
+## Eval Loop
+
+The Week 8 regression suite lives at [run_regressions.py](C:/Users/email/OneDrive/Documents/Playground/AgentScript/evals/run_regressions.py) and uses four permanent cases from [regression_cases.json](C:/Users/email/OneDrive/Documents/Playground/AgentScript/evals/regression_cases.json):
+
+- happy path
+- retry recovery
+- outage degradation
+- bad-model divergence plus replay masking
+
+The harness uses DeepEval-compatible test cases plus a custom structural metric, but keeps evaluation fully local and deterministic.
+
+## VS Code Extension
+
+The editor scaffold is in [vscode/agentscript](C:/Users/email/OneDrive/Documents/Playground/AgentScript/vscode/agentscript). It includes:
+
+- `.as` language registration
+- syntax highlighting via TextMate grammar
+- language configuration for brackets/comments
+- snippets for `agent`, `workflow`, and `tool`
+
+## Runtime API
+
+```python
+import asyncio
+
+from agentscript.runtime import AsyncInterpreter, ToolRegistry, compile_runtime_program
+
+source = """
+agent resilient {
+  retry(3, backoff=exponential)
+  fallback {
+    step degraded using fallback_answer(query=query)
+  }
+  circuit_breaker(threshold=0.50)
+}
+
+tool answer(query: string) -> string
+tool fallback_answer(query: string) -> string
+
+workflow main(query: string) -> string {
+  return answer(query)
+}
+"""
+
+registry = ToolRegistry()
+
+@registry.tool()
+def answer(query: str) -> str:
+    return f"answer:{query}"
+
+@registry.tool()
+def fallback_answer(query: str) -> str:
+    return f"fallback:{query}"
+
+program = compile_runtime_program(source)
+result = asyncio.run(
+    AsyncInterpreter(program, tools=registry).run_workflow(
+        "main",
+        arguments={"query": "bns section 103"},
+    )
+)
+print(result)
+```
+
+## Week 4-8 Highlights
+
+- Tool calls now lower into explicit `TOOL_CALL` and `TOOL_RESULT` IR instructions.
+- `ToolGateway` centralizes retries, half-open circuit recovery, replay stubbing, and trace capture.
+- Trace persistence writes redacted JSONL plus a SQLite replay index.
+- Replay runs disable live tool execution and hydrate tool results from the recorded trace.
+- `examples/legal_research.as` and `examples/legal_demo.py` provide the Week 6 legal-agent showcase.
+- `agentscript run ...` can execute a workflow against the bundled legal demo tools.
+- `agentscript dashboard ...` can either dump the trace model as JSON or serve a FastAPI dashboard backend.
+- `src/agentscript/observability/` adds a shared trace store, API server, and optional OTel instrumentation.
+- `dashboard/` contains the React dashboard source wired to the same run/timeline/memory/replay contracts.
+- `benchmarks/` contains a repeatable benchmark harness with JSON and Markdown outputs.
+- `evals/` contains a permanent regression set driven by trace-backed failure scenarios.
+- `vscode/agentscript/` contains the Week 8 VS Code extension scaffold.
+
+## Shadow Deployment
+
+The safest way to productionize AgentScript is to run it in shadow mode first:
+
+1. Mirror real workflow inputs into an AgentScript run without taking action on the output.
+2. Persist traces for every shadow run and inspect them in the dashboard.
+3. Compare replayed runs against your live system until divergence and fallback rates are acceptable.
+4. Promote individual workflows once the trace set becomes a stable regression corpus.
+
+## Repository Layout
+
+```text
+AgentScript/
+  dashboard/
+  benchmarks/
+  docs/
+  evals/
+  examples/
+  src/agentscript/
+    cli/
+    compiler/
+    observability/
+    runtime/
+  tests/
+  vscode/
+```
+
+## Near-Term Roadmap
+
+1. Build and serve the React dashboard bundle directly from FastAPI.
+2. Add richer VS Code completions and diagnostics beyond snippets/highlighting.
+3. Expand benchmark coverage to include larger corpora and dashboard overhead.
+4. Add Docker/collector wiring for exported OTel traces and shadow deployments.

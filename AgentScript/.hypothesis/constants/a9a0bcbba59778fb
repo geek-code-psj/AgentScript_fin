@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\models\llms\kimi_model.py
+# hypothesis_version: 6.151.9
+
+[0.0, 'Kimi', 'KimiModel', 'MOONSHOT_API_KEY', 'MOONSHOT_MODEL_NAME', 'content', 'image_url', 'json_object', 'max_retries', 'model', 'role', 'temperature', 'text', 'type', 'url', 'user']

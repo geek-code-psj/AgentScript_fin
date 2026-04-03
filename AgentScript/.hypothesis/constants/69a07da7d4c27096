@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\models\llms\grok_model.py
+# hypothesis_version: 6.151.9
+
+[0.0, 'GROK_API_KEY', 'GROK_MODEL_NAME', 'Grok', 'GrokModel', 'channel_options', 'grpc.enable_retries', 'image_url', 'model', 'temperature', 'text', 'type', 'url']

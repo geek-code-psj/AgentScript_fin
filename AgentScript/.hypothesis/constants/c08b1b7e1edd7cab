@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\sentry_sdk\_span_batcher.py
+# hypothesis_version: 6.151.9
+
+[5.0, 1000, 5000, 'Any', 'Callable[..., None]', 'Optional[int]', 'StreamedSpan', 'attributes', 'dict[str, Any]', 'item_count', 'items', 'name', 'queue_overflow', 'sent_at', 'span', 'span_id', 'status', 'threading.Event', 'trace']

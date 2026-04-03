@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\redis\driver_info.py
+# hypothesis_version: 6.151.9
+
+[126, '(', ')', 'Driver name', 'Driver version', 'DriverInfo', '[', ']', '^[a-z][a-z0-9_-]*$', 'redis-py', '{', '}']

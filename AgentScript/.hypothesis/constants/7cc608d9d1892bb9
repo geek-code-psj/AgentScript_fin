@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\sentry_sdk\integrations\dedupe.py
+# hypothesis_version: 6.151.9
+
+['Event', 'Optional[Event]', 'Optional[Hint]', 'dedupe', 'exc_info', 'last-seen']

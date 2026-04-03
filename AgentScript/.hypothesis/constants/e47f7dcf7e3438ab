@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\sentry_sdk\serializer.py
+# hypothesis_version: 6.151.9
+
+['!limit', '<cyclic>', 'Any', 'ContextManager[bool]', 'Dict[int, Any]', 'Dict[str, Any]', 'List[Any]', 'List[Dict[str, Any]]', 'List[ReprProcessor]', 'List[Segment]', 'List[type]', 'Optional[Segment]', 'Optional[bool]', 'Optional[int]', 'ReprProcessor', '__sentry_repr__', '_ids', '_meta', '_objs', 'always', 'breadcrumbs', 'custom_repr', 'data', 'description', 'extra', 'inf', 'is_vars', 'max_value_length', 'memo', 'remaining_depth', 'replace', 'request', 'spans', 'utf-8', 'values', 'x']

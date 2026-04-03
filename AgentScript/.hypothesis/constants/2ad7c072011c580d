@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\google\genai\_interactions\types\audio_mime_type_param.py
+# hypothesis_version: 6.151.9
+
+['AudioMimeTypeParam', 'audio/aac', 'audio/aiff', 'audio/flac', 'audio/mp3', 'audio/ogg', 'audio/wav']

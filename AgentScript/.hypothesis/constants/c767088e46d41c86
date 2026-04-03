@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\backoff\__init__.py
+# hypothesis_version: 6.151.9
+
+['2.2.1', 'constant', 'expo', 'fibo', 'full_jitter', 'on_exception', 'on_predicate', 'random_jitter', 'runtime']

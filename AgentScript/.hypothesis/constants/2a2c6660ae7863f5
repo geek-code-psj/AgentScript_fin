@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\models\llms\litellm_model.py
+# hypothesis_version: 6.151.9
+
+[0.0, 0.0001, 0.0002, '/', 'LITELLM_MODEL_NAME', 'LiteLLM', 'LiteLLMModel', 'api_base', 'api_key', 'base_url', 'completion_tokens', 'content', 'cost', 'image_url', 'logprobs', 'messages', 'model', 'n', 'prompt_tokens', 'response_format', 'role', 'temperature', 'text', 'top_logprobs', 'type', 'url', 'user']

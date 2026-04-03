@@ -1,0 +1,4 @@
+# file: C:\Users\email\OneDrive\Documents\Playground\AgentScript\src\agentscript\compiler\lexer.py
+# hypothesis_version: 6.151.9
+
+['\x00', '!', '!=', '"', '#', '(', ')', '*', '+', ',', '-', '->', '.', '/', ':', ';', '<', '<=', '<memory>', '=', '==', '=>', '>', '>=', "Did you mean '!='?", '[', '\\', ']', '_', 'n', 'r', 't', 'utf-8', '{', '}']

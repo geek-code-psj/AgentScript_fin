@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\pytest_jsonreport\plugin.py
+# hypothesis_version: 6.151.9
+
+['+', '-', '--json-report', '--json-report-file', '--json-report-indent', '--json-report-omit', '.report.json', 'JSON report', '_json_report', '_json_report_extra', '_metadata', 'args', 'call', 'collected', 'collectors', 'create JSON report', 'deselected', 'exc_info', 'jsonreport', 'keywords', 'log', 'message', 'metadata', 'msg', 'no', 'none', 'outcome', 'passed', 'report saved to: {}', 'setup', 'stderr', 'stdout', 'store_true', 'streams', 'teardown', 'tests', 'traceback', 'user_properties', 'utf-8', 'w', 'warnings', 'workerinput']

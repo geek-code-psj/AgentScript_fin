@@ -1,0 +1,4 @@
+# file: C:\Users\email\OneDrive\Documents\Playground\AgentScript\src\agentscript\demo\__init__.py
+# hypothesis_version: 6.151.9
+
+['DemoState', 'LEGAL_DATA_PATH', 'LEGAL_SCRIPT_PATH', 'build_demo_registry', 'find_divergence', 'run_demo']

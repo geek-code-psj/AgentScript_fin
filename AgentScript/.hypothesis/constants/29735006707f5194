@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\sentry_sdk\metrics.py
+# hypothesis_version: 6.151.9
+
+['Attributes', 'Metric', 'MetricType', 'Optional[Attributes]', 'Optional[str]', 'attributes', 'counter', 'distribution', 'gauge', 'name', 'span_id', 'timestamp', 'trace_id', 'type', 'unit', 'value']

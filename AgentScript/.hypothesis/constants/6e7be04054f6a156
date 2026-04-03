@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\tracing\types.py
+# hypothesis_version: 6.151.9
+
+['BaseSpan', 'ERRORED', 'IN_PROGRESS', 'SUCCESS', 'agent', 'chunkSize', 'context', 'costPerInputToken', 'costPerOutputToken', 'default', 'endTime', 'expectedOutput', 'expectedTools', 'failure', 'inputTokenCount', 'llm', 'outputTokenCount', 'parentUuid', 'promptAlias', 'promptCommitHash', 'promptLabel', 'promptVersion', 'retrievalContext', 'retriever', 'rootSpans', 'startTime', 'success', 'testCaseId', 'thinking', 'tokenTimes', 'tool', 'tool_calls', 'tool_output', 'toolsCalled', 'topK', 'traceUuid', 'uuid', 'warning']

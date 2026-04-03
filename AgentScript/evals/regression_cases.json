@@ -1,0 +1,39 @@
+[
+  {
+    "name": "happy_path",
+    "mode": "happy",
+    "query": "BNS theft appeal",
+    "expected": {
+      "min_confidence": 0.8,
+      "fallback_calls": 0
+    }
+  },
+  {
+    "name": "retry_recovers",
+    "mode": "retry",
+    "query": "BNS theft appeal",
+    "expected": {
+      "min_confidence": 0.8,
+      "search_calls": 2
+    }
+  },
+  {
+    "name": "outage_degrades_cleanly",
+    "mode": "outage",
+    "query": "BNS theft appeal",
+    "expected": {
+      "min_confidence": 0.55,
+      "max_confidence": 0.7,
+      "fallback_calls": 1
+    }
+  },
+  {
+    "name": "bad_model_replay_masking",
+    "mode": "bad-model",
+    "query": "BNS theft appeal",
+    "expected": {
+      "replay_matches_reference": true,
+      "divergence_step_id": "summarize_claim_0"
+    }
+  }
+]

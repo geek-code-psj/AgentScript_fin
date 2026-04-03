@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\sentry_sdk\crons\api.py
+# hypothesis_version: 6.151.9
+
+['Event', 'Optional[float]', 'Optional[str]', 'check_in', 'check_in_id', 'duration', 'environment', 'monitor_config', 'monitor_slug', 'release', 'status', 'type']

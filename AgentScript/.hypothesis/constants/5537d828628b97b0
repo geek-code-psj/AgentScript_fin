@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\pytest_metadata\plugin.py
+# hypothesis_version: 6.151.9
+
+['--metadata', '--metadata-from-json', 'Packages', 'Platform', 'Plugins', 'Python', 'additional metadata.', 'append', 'key', 'metadata', 'metadata: {0}', 'metadata_from_json', 'pluggy', 'pytest', 'pytest-', 'pytest-metadata', 'r', 'session', 'store', 'value', 'verbose', 'workeroutput', '{}']

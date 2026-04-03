@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\openai\types\responses\response_function_shell_call_output_content.py
+# hypothesis_version: 6.151.9
+
+['Outcome', 'OutcomeExit', 'OutcomeTimeout', 'exit', 'timeout', 'type']

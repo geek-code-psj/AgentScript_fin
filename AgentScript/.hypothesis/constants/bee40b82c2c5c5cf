@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\tracing\api.py
+# hypothesis_version: 6.151.9
+
+['ERRORED', 'SUCCESS', 'agent', 'agentHandoffs', 'agentSpans', 'availableTools', 'base', 'baseSpans', 'chunkSize', 'context', 'costPerInputToken', 'costPerOutputToken', 'endTime', 'evaluationCost', 'evaluationModel', 'expectedOutput', 'expectedTools', 'ignore', 'inputTokenCount', 'llm', 'llmSpans', 'metricCollection', 'metricsData', 'outputTokenCount', 'parentUuid', 'promptAlias', 'promptCommitHash', 'promptLabel', 'promptVersion', 'retrievalContext', 'retriever', 'retrieverSpans', 'startTime', 'strictMode', 'testCaseId', 'threadId', 'tokenIntervals', 'tool', 'toolSpans', 'toolsCalled', 'topK', 'userId', 'verboseLogs']

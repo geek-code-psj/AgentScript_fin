@@ -1,0 +1,4 @@
+# file: C:\Users\email\OneDrive\Documents\Playground\AgentScript\src\agentscript\runtime\tracing.py
+# hypothesis_version: 6.151.9
+
+['agent_name', 'arguments', 'created_at', 'error', 'event_type', 'final_output_json', 'instruction_index', 'message', 'output', 'payload_json', 'run_finished', 'run_id', 'run_started', 'running', 'seq', 'status', 'type', 'workflow_name']

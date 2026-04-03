@@ -1,0 +1,4 @@
+# file: C:\Users\email\AppData\Roaming\Python\Python313\site-packages\deepeval\evaluate\execute.py
+# hypothesis_version: 6.151.9
+
+['    stack:', '  - STRAY %s meta=%s', 'None', 'Test Wrapper', 'TimeoutError', '__traceback__', 'children', 'coro', 'custom', 'error', 'evaluating metric', 'gather', 'golden', 'golden_index', 'golden_name', 'index', 'input', 'metrics', 'name', 'per-task', 'requires_trace', 'root_span_uuid', 'root_spans', 'skip', 'skipped', 'started', 'success', 'test case', 'trace_uuid', '{task.description}']
