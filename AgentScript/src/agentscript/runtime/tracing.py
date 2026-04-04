@@ -1,4 +1,12 @@
-"""SQLite and JSONL trace recording for AgentScript runtime runs."""
+"""SQLite and JSONL trace recording for AgentScript runtime runs.
+
+Implements:
+- Structured event logging (TOOL_CALL, TOOL_RESULT, MEMORY_SEARCH)
+- JSONL append-only format for streaming/replay
+- SQLite persistence for fast queries
+- Comprehensive PII/secrets redaction
+- Event source integrity tracking
+"""
 
 from __future__ import annotations
 
@@ -14,10 +22,116 @@ import uuid
 from agentscript.runtime.records import ReplayResult, ReplaySource, ToolCall, ToolResult, TraceEvent
 
 
+# Comprehensive regex patterns for PII and secrets redaction
 EMAIL_RE = re.compile(r"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b", re.IGNORECASE)
 PHONE_RE = re.compile(r"(?<!\d)(?!\d{4}-\d{2}-\d{2}\b)(?:\+?\d[\d -]{8,}\d)(?!\d)")
+SSN_RE = re.compile(r"\b\d{3}-\d{2}-\d{4}\b")
+IP_ADDRESS_RE = re.compile(r"\b(?:\d{1,3}\.){3}\d{1,3}\b")
+
+# API Key patterns
 OPENAI_KEY_RE = re.compile(r"\bsk-[A-Za-z0-9]{16,}\b")
+ANTHROPIC_KEY_RE = re.compile(r"\bsk-ant-[A-Za-z0-9]{28,}\b")
+AWS_KEY_RE = re.compile(r"\bAKIA[0-9A-Z]{16}\b")
+GOOGLE_KEY_RE = re.compile(r"\bAIza[0-9A-Za-z\\-_]{35}\b")
+
+# Authentication headers
 BEARER_RE = re.compile(r"Bearer\s+[A-Za-z0-9._-]+", re.IGNORECASE)
+AUTHORIZATION_RE = re.compile(r"Authorization:\s*[^\s,]+", re.IGNORECASE)
+X_API_KEY_RE = re.compile(r"X-API-Key:\s*[^\s,]+", re.IGNORECASE)
+
+# Full URL patterns with embedded secrets
+URL_WITH_SECRET_RE = re.compile(r"(https?://[^:]+:)[^@]+(@)")  # protocol://user:password@
+
+
+class RedactionPolicy:
+    """Configurable policy for PII/secrets redaction.
+    
+    Controls which types of sensitive data are redacted from traces.
+    Redaction happens at serialization time (write), not retrieval time,
+    so audit trails are preserved in the database.
+    """
+    
+    def __init__(
+        self,
+        *,
+        redact_emails: bool = True,
+        redact_phones: bool = True,
+        redact_ssn: bool = True,
+        redact_ip_addresses: bool = True,
+        redact_api_keys: bool = True,
+        redact_auth_headers: bool = True,
+        redact_credentials: bool = True,
+        custom_patterns: list[tuple[re.Pattern[str], str]] | None = None,
+    ) -> None:
+        """Initialize redaction policy.
+        
+        Args:
+            redact_emails: Redact email addresses (@domain.com)
+            redact_phones: Redact phone numbers (various formats)
+            redact_ssn: Redact social security numbers (XXX-XX-XXXX)
+            redact_ip_addresses: Redact IPv4 addresses (X.X.X.X)
+            redact_api_keys: Redact API keys (OpenAI sk-, Anthropic sk-ant-, AWS AKIA, Google AIza)
+            redact_auth_headers: Redact Authorization and X-API-Key headers
+            redact_credentials: Redact URL credentials (user:password@)
+            custom_patterns: Additional regex patterns for redaction [(pattern, replacement), ...]
+        """
+        self.patterns: list[tuple[re.Pattern[str], str]] = []
+        
+        if redact_emails:
+            self.patterns.append((EMAIL_RE, "[REDACTED_EMAIL]"))
+        if redact_phones:
+            self.patterns.append((PHONE_RE, "[REDACTED_PHONE]"))
+        if redact_ssn:
+            self.patterns.append((SSN_RE, "[REDACTED_SSN]"))
+        if redact_ip_addresses:
+            self.patterns.append((IP_ADDRESS_RE, "[REDACTED_IP]"))
+        
+        if redact_api_keys:
+            self.patterns.extend([
+                (OPENAI_KEY_RE, "[REDACTED_OPENAI_KEY]"),
+                (ANTHROPIC_KEY_RE, "[REDACTED_ANTHROPIC_KEY]"),
+                (AWS_KEY_RE, "[REDACTED_AWS_KEY]"),
+                (GOOGLE_KEY_RE, "[REDACTED_GOOGLE_KEY]"),
+            ])
+        
+        if redact_auth_headers:
+            self.patterns.extend([
+                (BEARER_RE, "Bearer [REDACTED_TOKEN]"),
+                (AUTHORIZATION_RE, "Authorization: [REDACTED]"),
+                (X_API_KEY_RE, "X-API-Key: [REDACTED]"),
+            ])
+        
+        if redact_credentials:
+            self.patterns.append((URL_WITH_SECRET_RE, r"\1[REDACTED]\2"))
+        
+        if custom_patterns:
+            self.patterns.extend(custom_patterns)
+    
+    def redact(self, value: object) -> object:
+        """Redact a value using the configured policy.
+        
+        Args:
+            value: Value to redact (string, dict, list, dataclass, etc.)
+            
+        Returns:
+            Redacted value (same type as input)
+        """
+        if isinstance(value, dict):
+            return {str(key): self.redact(item) for key, item in value.items()}
+        if isinstance(value, (list, tuple)):
+            return [self.redact(item) for item in value]
+        if isinstance(value, str):
+            result = value
+            for pattern, replacement in self.patterns:
+                result = pattern.sub(replacement, result)
+            return result
+        if is_dataclass(value) and not isinstance(value, type):
+            return self.redact(asdict(value))
+        return value
+
+
+# Global default redaction policy
+_DEFAULT_REDACTION_POLICY = RedactionPolicy()
 
 
 class SQLiteTraceRecorder:
@@ -458,23 +572,12 @@ def format_replay(result: ReplayResult) -> str:
 
 
 def redact_payload(value: object) -> object:
-    """Redact PII and API-like secrets before trace persistence."""
-
-    if isinstance(value, dict):
-        return {str(key): redact_payload(item) for key, item in value.items()}
-    if isinstance(value, list):
-        return [redact_payload(item) for item in value]
-    if isinstance(value, tuple):
-        return [redact_payload(item) for item in value]
-    if isinstance(value, str):
-        redacted = EMAIL_RE.sub("[REDACTED_EMAIL]", value)
-        redacted = OPENAI_KEY_RE.sub("[REDACTED_API_KEY]", redacted)
-        redacted = PHONE_RE.sub("[REDACTED_PHONE]", redacted)
-        redacted = BEARER_RE.sub("Bearer [REDACTED_TOKEN]", redacted)
-        return redacted
-    if is_dataclass(value):
-        return redact_payload(asdict(value))
-    return value
+    """Redact PII and API-like secrets before trace persistence.
+    
+    Uses the default global redaction policy.
+    Redacted secrets are replaced with tokens like [REDACTED_EMAIL].
+    """
+    return _DEFAULT_REDACTION_POLICY.redact(value)
 
 
 def _utc_now() -> str:

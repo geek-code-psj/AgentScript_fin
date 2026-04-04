@@ -1,31 +1,87 @@
 [
   {
-    "name": "happy_path",
+    "name": "happy_path_baseline",
     "mode": "happy",
     "query": "BNS theft appeal",
     "expected": {
       "min_confidence": 0.8,
-      "fallback_calls": 0
-    }
+      "fallback_calls": 0,
+      "search_calls": 1
+    },
+    "tags": ["happy_path", "baseline", "observability"]
   },
   {
-    "name": "retry_recovers",
+    "name": "happy_path_complex_query",
+    "mode": "happy",
+    "query": "defend against allegations of property theft in court proceedings involving multiple parties",
+    "expected": {
+      "min_confidence": 0.7,
+      "fallback_calls": 0
+    },
+    "tags": ["happy_path", "complex", "language_variation"]
+  },
+  {
+    "name": "happy_path_short_query",
+    "mode": "happy",
+    "query": "theft",
+    "expected": {
+      "min_confidence": 0.65,
+      "fallback_calls": 0
+    },
+    "tags": ["happy_path", "edge_case"]
+  },
+  {
+    "name": "retry_transient_failure",
     "mode": "retry",
     "query": "BNS theft appeal",
     "expected": {
       "min_confidence": 0.8,
-      "search_calls": 2
-    }
+      "search_calls": 2,
+      "retry_attempts": 1
+    },
+    "tags": ["resilience", "retry", "transient"]
   },
   {
-    "name": "outage_degrades_cleanly",
+    "name": "retry_multiple_failures",
+    "mode": "retry",
+    "query": "BNS theft appeal",
+    "expected": {
+      "min_confidence": 0.75,
+      "retry_attempts": 2
+    },
+    "tags": ["resilience", "retry", "exponential_backoff"]
+  },
+  {
+    "name": "outage_graceful_degradation",
     "mode": "outage",
     "query": "BNS theft appeal",
     "expected": {
       "min_confidence": 0.55,
       "max_confidence": 0.7,
+      "fallback_calls": 1,
+      "degraded": true
+    },
+    "tags": ["resilience", "circuit_breaker", "fallback"]
+  },
+  {
+    "name": "outage_heuristic_path",
+    "mode": "outage",
+    "query": "assault charges appeal",
+    "expected": {
+      "max_confidence": 0.75,
       "fallback_calls": 1
-    }
+    },
+    "tags": ["resilience", "circuit_breaker", "heuristic"]
+  },
+  {
+    "name": "circuit_breaker_half_open",
+    "mode": "circuit-breaker-half-open",
+    "query": "BNS theft appeal",
+    "expected": {
+      "circuit_state": "half_open",
+      "recovery_attempt": true
+    },
+    "tags": ["resilience", "circuit_breaker", "state_machine"]
   },
   {
     "name": "bad_model_replay_masking",
@@ -34,6 +90,201 @@
     "expected": {
       "replay_matches_reference": true,
       "divergence_step_id": "summarize_claim_0"
-    }
+    },
+    "tags": ["replay", "model_config", "determinism"]
+  },
+  {
+    "name": "replay_consistent_outputs",
+    "mode": "replay",
+    "query": "BNS theft appeal",
+    "expected": {
+      "replay_matches_live": true,
+      "output_hash_matches": true
+    },
+    "tags": ["replay", "idempotency", "determinism"]
+  },
+  {
+    "name": "timeout_handling",
+    "mode": "timeout",
+    "query": "BNS theft appeal",
+    "expected": {
+      "timeout_triggered": true,
+      "fallback_invoked": true
+    },
+    "tags": ["resilience", "timeout", "error_handling"]
+  },
+  {
+    "name": "memory_semantic_search_accuracy",
+    "mode": "happy",
+    "query": "BNS theft appeal",
+    "expected": {
+      "memory_operations": {
+        "semantic_search_called": true,
+        "memory_hit_rate": {"min": 0.5, "max": 1.0}
+      }
+    },
+    "tags": ["memory", "semantic_search", "recall"]
+  },
+  {
+    "name": "memory_session_persistence",
+    "mode": "happy",
+    "query": "BNS theft appeal",
+    "expected": {
+      "memory_state": {
+        "session_id_persisted": true,
+        "context_maintained_across_steps": true
+      }
+    },
+    "tags": ["memory", "session", "persistence"]
+  },
+  {
+    "name": "pii_redaction_email",
+    "mode": "happy",
+    "query": "contact john.smith@example.com about theft case",
+    "expected": {
+      "pii_redacted": true,
+      "email_masked": true,
+      "email_patterns": [{"pattern": "\\[EMAIL_REDACTED\\]", "count_gte": 1}]
+    },
+    "tags": ["security", "pii", "redaction"]
+  },
+  {
+    "name": "pii_redaction_api_key",
+    "mode": "happy",
+    "query": "retrieve case with api_key=sk_live_12345abcde67890fghij",
+    "expected": {
+      "pii_redacted": true,
+      "api_key_masked": true
+    },
+    "tags": ["security", "pii", "api_credentials"]
+  },
+  {
+    "name": "pii_redaction_ssn",
+    "mode": "happy",
+    "query": "plaintiff SSN is 123-45-6789",
+    "expected": {
+      "pii_redacted": true,
+      "ssn_masked": true
+    },
+    "tags": ["security", "pii", "sensitive_id"]
+  },
+  {
+    "name": "observability_span_attributes",
+    "mode": "happy",
+    "query": "BNS theft appeal",
+    "expected": {
+      "otel_spans": {
+        "workflow_span_created": true,
+        "tool_call_spans_recorded": true,
+        "semantic_attributes": [
+          "gen_ai.agent.name",
+          "gen_ai.operation.name",
+          "agentscript.workflow.name",
+          "agentscript.tool.name"
+        ]
+      }
+    },
+    "tags": ["observability", "otel", "semantic_conventions"]
+  },
+  {
+    "name": "observability_error_span_context",
+    "mode": "error",
+    "query": "BNS theft appeal",
+    "expected": {
+      "error_context_captured": true,
+      "error_attributes": [
+        "error.type",
+        "agentscript.error.category",
+        "agentscript.step.id"
+      ]
+    },
+    "tags": ["observability", "error_handling", "otel"]
+  },
+  {
+    "name": "langsmith_trace_logging",
+    "mode": "happy",
+    "query": "BNS theft appeal",
+    "expected": {
+      "langsmith_enabled": true,
+      "trace_posted_to_langsmith": true,
+      "child_spans_recorded": true
+    },
+    "tags": ["observability", "langsmith", "tracing"]
+  },
+  {
+    "name": "tool_registry_missing_handler",
+    "mode": "missing-tool",
+    "query": "BNS theft appeal",
+    "expected": {
+      "error": "ToolNotRegisteredError",
+      "error_message_contains": "not registered"
+    },
+    "tags": ["error_handling", "tool_registry", "validation"]
+  },
+  {
+    "name": "workflow_not_found",
+    "mode": "unknown-workflow",
+    "query": "some query",
+    "expected": {
+      "error": "UnknownWorkflowError",
+      "error_message_contains": "does not exist"
+    },
+    "tags": ["error_handling", "workflow_validation"]
+  },
+  {
+    "name": "model_config_snapshot",
+    "mode": "happy",
+    "query": "BNS theft appeal",
+    "expected": {
+      "model_config": {
+        "model_id_recorded": true,
+        "temperature_recorded": true,
+        "max_tokens_recorded": true
+      }
+    },
+    "tags": ["observability", "model_config", "auditability"]
+  },
+  {
+    "name": "replay_with_different_model_divergence",
+    "mode": "bad-model",
+    "query": "BNS theft appeal",
+    "expected": {
+      "replay_diverges_at_inference": true,
+      "step_id": "summarize_claim_0",
+      "model_config_differs": true
+    },
+    "tags": ["replay", "model_config", "divergence_detection"]
+  },
+  {
+    "name": "concurrent_workflow_isolation",
+    "mode": "happy",
+    "query": "BNS theft appeal",
+    "expected": {
+      "concurrent_runs": 3,
+      "isolation_maintained": true,
+      "no_cross_contamination": true
+    },
+    "tags": ["concurrency", "isolation", "state_management"]
+  },
+  {
+    "name": "trace_event_ordering",
+    "mode": "happy",
+    "query": "BNS theft appeal",
+    "expected": {
+      "trace_events_ordered": true,
+      "sequence_numbers_monotonic": true,
+      "causality_preserved": true
+    },
+    "tags": ["observability", "trace_ordering", "causality"]
+  },
+  {
+    "name": "recovery_action_recorded",
+    "mode": "retry",
+    "query": "BNS theft appeal",
+    "expected": {
+      "recovery_action": "exponential_backoff",
+      "span_attribute_set": "agentscript.error.recovery_action"
+    },
+    "tags": ["observability", "error_recovery", "slo_tracking"]
   }
 ]

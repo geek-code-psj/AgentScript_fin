@@ -1,0 +1,53 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "agentscript.fullname" . }}-agents
+  labels:
+    {{- include "agentscript.labels" . | nindent 4 }}
+data:
+  {{- range .Values.agents }}
+  {{ .name }}.as: |
+    # AgentScript agent definition: {{ .name }}
+    # This should be populated with actual agent definitions
+    # See examples/legal_research.as for an example
+    workflow {{ .name }} {
+      # Agent logic to be filled in
+    }
+  {{- end }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "agentscript.fullname" . }}-config
+  labels:
+    {{- include "agentscript.labels" . | nindent 4 }}
+data:
+  config.json: |
+    {
+      "circuitBreaker": {
+        "enabled": {{ .Values.circuitBreaker.enabled }},
+        "failureRateThreshold": {{ .Values.circuitBreaker.failureRateThreshold }},
+        "slowCallRateThreshold": {{ .Values.circuitBreaker.slowCallRateThreshold }},
+        "slowCallDurationThreshold": {{ .Values.circuitBreaker.slowCallDurationThreshold }},
+        "permittedNumberOfCallsInHalfOpenState": {{ .Values.circuitBreaker.permittedNumberOfCallsInHalfOpenState }},
+        "minimumNumberOfCalls": {{ .Values.circuitBreaker.minimumNumberOfCalls }},
+        "waitDurationInOpenState": {{ .Values.circuitBreaker.waitDurationInOpenState }}
+      },
+      "piiRedaction": {
+        "enabled": {{ .Values.piiRedaction.enabled }},
+        "patterns": [
+          {{- range .Values.piiRedaction.patterns }}
+          {
+            "name": {{ .name | quote }},
+            "enabled": {{ .enabled }}
+          }
+          {{- if not (last .) }},{{ end }}
+          {{- end }}
+        ]
+      },
+      "otel": {
+        "enabled": {{ .Values.otel.enabled }},
+        "exporter": {{ .Values.otel.exporter | quote }},
+        "samplingRate": {{ .Values.otel.samplingRate }}
+      }
+    }

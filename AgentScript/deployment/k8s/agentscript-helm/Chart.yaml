@@ -1,0 +1,24 @@
+apiVersion: v2
+name: agentscript
+description: Production-grade agentic AI orchestration platform
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
+
+keywords:
+  - agent
+  - ai
+  - agentic-systems
+  - workflow
+  - orchestration
+  - observability
+
+maintainers:
+  - name: AgentScript Team
+    email: team@agentscript.dev
+
+home: https://github.com/agentscript/agentscript
+sources:
+  - https://github.com/agentscript/agentscript
+
+dependencies: []

@@ -1,0 +1,194 @@
+# AgentScript Helm Chart - Default Configuration Values
+# See deployment/k8s/README.md for detailed explanations
+
+# Replica count for the AgentScript controller
+replicaCount: 3
+
+image:
+  repository: agentscript/agentscript
+  pullPolicy: IfNotPresent
+  tag: "1.0.0"
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+
+podAnnotations:
+  prometheus.io/scrape: "true"
+  prometheus.io/port: "8080"
+  prometheus.io/path: "/metrics"
+
+podSecurityContext:
+  runAsNonRoot: true
+  runAsUser: 1000
+  fsGroup: 1000
+
+securityContext:
+  capabilities:
+    drop:
+      - ALL
+  readOnlyRootFilesystem: true
+  allowPrivilegeEscalation: false
+
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 8000
+  annotations: {}
+
+ingress:
+  enabled: false
+  className: "nginx"
+  annotations: {}
+  hosts:
+    - host: agentscript.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: []
+
+# Resource requests and limits
+resources:
+  limits:
+    cpu: 2000m
+    memory: 2Gi
+  requests:
+    cpu: 500m
+    memory: 512Mi
+
+# Autoscaling configuration
+autoscaling:
+  enabled: true
+  minReplicas: 3
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 70
+  targetMemoryUtilizationPercentage: 80
+
+# StatefulSet for persistent trace storage
+statefulSet:
+  enabled: true
+  serviceName: agentscript-headless
+  storageClassName: standard
+  storageSize: 10Gi
+
+# Environment configuration
+env:
+  PYTHONUNBUFFERED: "1"
+  OTEL_SDK_DISABLED: "false"
+  OTEL_EXPORTER_OTLP_PROTOCOL: grpc
+  OTEL_EXPORTER_OTLP_ENDPOINT: http://jaeger-collector:4317
+
+# OpenTelemetry configuration
+otel:
+  enabled: true
+  exporter: otlp  # otlp, jaeger, datadog, new-relic
+  samplingRate: 1.0  # 100% sampling in production
+  jaegerEndpoint: http://jaeger-collector:4317
+
+# LangSmith integration
+langsmith:
+  enabled: true
+  apiKey: ""  # Set via secrets
+  endpoint: https://api.smith.langchain.com
+  orgId: ""  # Set via secrets
+
+# Trace storage backend
+traceStore:
+  backend: sqlite  # sqlite, postgresql
+  sqlite:
+    persistenceSize: 10Gi
+    backupEnabled: true
+    backupSchedule: "0 2 * * *"  # 2 AM daily
+  postgresql:
+    host: postgres.default.svc.cluster.local
+    port: 5432
+    username: agentscript
+    database: agentscript_traces
+    # password: Set via secrets
+
+# Circuit breaker configuration
+circuitBreaker:
+  enabled: true
+  failureRateThreshold: 50  # %
+  slowCallRateThreshold: 50  # %
+  slowCallDurationThreshold: 2000  # ms
+  permittedNumberOfCallsInHalfOpenState: 3
+  minimumNumberOfCalls: 10
+  waitDurationInOpenState: 30000  # ms (30 seconds)
+  recordExceptions:
+    - ToolInvocationError
+    - TimeoutError
+
+# PII redaction configuration
+piiRedaction:
+  enabled: true
+  patterns:
+    - name: email
+      enabled: true
+    - name: phone
+      enabled: true
+    - name: ssn
+      enabled: true
+    - name: creditCard
+      enabled: true
+    - name: apiKey
+      enabled: true
+    - name: bearerToken
+      enabled: true
+
+# Monitoring and alerting
+monitoring:
+  enabled: true
+  prometheus:
+    enabled: true
+    port: 8080
+    path: /metrics
+  alerts:
+    enabled: true
+    rules:
+      - name: HighErrorRate
+        expr: rate(agentscript_workflow_errors_total[5m]) > 0.05
+        severity: critical
+      - name: HighLatency
+        expr: histogram_quantile(0.95, rate(agentscript_workflow_duration_seconds_bucket[5m])) > 5
+        severity: warning
+      - name: LowSuccessRate
+        expr: rate(agentscript_workflow_success_total[5m]) < 0.995
+        severity: warning
+
+# Agent definitions (ConfigMap)
+agents:
+  - name: legal_researcher
+    script: /etc/agentscript/agents/legal_research.as
+  - name: document_analyzer
+    script: /etc/agentscript/agents/document_analyzer.as
+
+# Secrets for API keys and credentials
+secrets:
+  openai:
+    apiKey: ""  # Set via environment or Sealed Secrets
+  anthropic:
+    apiKey: ""
+  together:
+    apiKey: ""
+
+# Dashboard configuration
+dashboard:
+  enabled: true
+  serviceType: LoadBalancer
+  port: 3000
+  replicas: 2
+
+# Logging configuration
+logging:
+  enabled: true
+  level: INFO
+  format: json  # json or text
+  outputs:
+    - stdout
+    - file  # /var/log/agentscript/
